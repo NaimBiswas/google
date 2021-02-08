@@ -6,11 +6,29 @@
     display: inline-flex;
    
 }
-.header_right ul li {
+.header_right ul li a {
     padding: 10px 10px;
-    font-size: 22px;
-}
-.MuiSvgIcon-root {
+   
+    color: #111111;
+    list-style: none;
+    text-decoration:none ;
 
-    font-size: 33px;
+}
+.header_right ul li a:hover{
+   text-decoration: underline;
+}
+
+.appIcons{
+margin-right: 50px;
+}
+.dropdown-toggle::after {
+    display: none ;
+   
+}
+.showName {
+   position: absolute;
+    left: -70%!important;
+   
+    border: 1px solid red;
+    top: -2px!important;
 }
