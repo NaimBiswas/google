@@ -37,8 +37,8 @@ const Home = () => {
                <div className="google-icon">
                   <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
                </div>
-               <div className="google-seacrch">
-
+               <div className="google-seacrch-input">
+                  {/* Seacrh Conponent here  */}
                </div>
             </div>
          </div>
