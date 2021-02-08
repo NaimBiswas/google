@@ -23,6 +23,7 @@
 
 .appIcons{
  padding-right: 25px;
+ margin-left: -5px;
 }
 .dropdown-toggle::after {
     display: none ;

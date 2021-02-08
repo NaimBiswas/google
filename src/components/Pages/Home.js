@@ -28,7 +28,7 @@ const Home = () => {
                            </Dropdown.Menu>
                         </Dropdown>
                      </li>
-                     <li className='appIcons'><Link to='/account'><AccountCircleIcon fontSize='large'></AccountCircleIcon ></Link></li>
+                     <li className='appIcons'><Link to='/account'><AccountCircleIcon fontSize='large' color='action'></AccountCircleIcon ></Link></li>
                   </ul>
 
                </div>

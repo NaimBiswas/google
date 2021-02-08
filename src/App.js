@@ -8,7 +8,7 @@ import Home from './components/Pages/Home';
 function App() {
    return (
       <Fragment>
-         <div style={{ minHeight: '94vh' }} className="App">
+         <div style={{ minHeight: '85vh' }} className="App">
             <BrowserRouter>
                <Home></Home>
 
