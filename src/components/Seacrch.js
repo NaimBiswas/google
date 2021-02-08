@@ -9,15 +9,18 @@ import { actionTypes } from '../reducer';
 
 
 const Seacrch = ({ searchButtonHidden = false }) => {
-
    const [Input, setInput] = useState('')
+   const [{ }, dispatch] = useStateValue()
    const history = useHistory()
-   const search = e => {
+   const search = (e) => {
       e.preventDefault();
-
+      dispatch({
+         type: actionTypes.SET_SEARCH_TERM,
+         term: Input,
+      })
       history.push('/search')
    }
-   console.log(Input);
+
    return (
       <form>
          <div className="search-input">
