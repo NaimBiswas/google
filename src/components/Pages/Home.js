@@ -8,7 +8,6 @@ import { Dropdown, NavItem, NavLink } from 'react-bootstrap';
 const Home = () => {
    return (
       <Fragment>
-         <h2>This is our home component sd</h2>
          <div className="home">
             <div className="home_header">
 
@@ -32,7 +31,12 @@ const Home = () => {
                </div>
             </div>
             <div className="home_body">
+               <div className="google-icon">
+                  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
+               </div>
+               <div className="google-seacrch">
 
+               </div>
             </div>
          </div>
       </Fragment>
