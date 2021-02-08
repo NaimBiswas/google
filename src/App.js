@@ -7,7 +7,7 @@ function App() {
    return (
       <Fragment>
          <div style={{ minHeight: '94vh' }} className="App">
-
+            <Home></Home>
          </div>
          <hr />
          this is footer test

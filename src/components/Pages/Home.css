@@ -1,0 +1,16 @@
+.header_right{
+   text-align: right;
+}
+.header_right ul{
+     list-style: none;
+    display: inline-flex;
+   
+}
+.header_right ul li {
+    padding: 10px 10px;
+    font-size: 22px;
+}
+.MuiSvgIcon-root {
+
+    font-size: 33px;
+}
