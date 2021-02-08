@@ -1,6 +1,6 @@
 .header_right{
    text-align: right;
-   margin-top: 20px;
+   padding-top: 20px;
    
 }
 .header_right ul{
@@ -22,7 +22,7 @@
 }
 
 .appIcons{
- padding-right: 25px;
+ padding-right: 20px;
  margin-left: -5px;
 }
 .dropdown-toggle::after {
@@ -31,7 +31,7 @@
 }
 .showName {
    position: absolute;
-    left: -70%!important;
+    left: -10%!important;
    
     border: 1px solid red;
     top: -2px!important;

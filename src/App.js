@@ -8,14 +8,12 @@ import Home from './components/Pages/Home';
 function App() {
    return (
       <Fragment>
-         <div style={{ minHeight: '85vh' }} className="App">
+         <div style={{ minHeight: '100vh', background: 'antiquewhite' }} className="App">
             <BrowserRouter>
                <Home></Home>
 
             </BrowserRouter>
          </div>
-         <hr />
-         this is footer test
       </Fragment>
 
    );
