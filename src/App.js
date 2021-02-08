@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import Home from './components/Pages/Home';
-import { Search } from '@material-ui/icons';
+
 import SearchPage from './components/SearchPage';
 
 function App() {

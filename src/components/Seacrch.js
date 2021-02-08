@@ -7,16 +7,14 @@ import { useHistory } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
+
 const Seacrch = ({ searchButtonHidden = false }) => {
-   const [{ }, dispatch] = useStateValue();
+
    const [Input, setInput] = useState('')
    const history = useHistory()
    const search = e => {
       e.preventDefault();
-      dispatch({
-         type: actionTypes.SET_SEARCH_TERM,
-         term: Input,
-      })
+
       history.push('/search')
    }
    console.log(Input);

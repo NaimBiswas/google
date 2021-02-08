@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const SearchPage = () => {
    return (
-      <div>
+
+      <div className="SearchPage">
 
       </div>
+
    )
 }
 
