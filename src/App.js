@@ -6,8 +6,8 @@ import Home from './components/Home';
 function App() {
    return (
       <Fragment>
-         <div className="App">
-            <Home></Home>
+         <div style={{ minHeight: '94vh' }} className="App">
+
          </div>
          <hr />
          this is footer test
