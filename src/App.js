@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import './App.css';
-import Home from './components/Home';
+import Home from './components/Pages/Home';
 
 function App() {
    return (
