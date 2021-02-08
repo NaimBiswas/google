@@ -22,19 +22,12 @@ const Seacrch = ({ searchButtonHidden = false }) => {
          </div>
          <div className="search-button  text-center mt-4">
 
-            {
-               !searchButtonHidden ? (
-                  <div className="">
-                     <Button type='submit' onClick={search} variant='outlined'>Google Search</Button>
-                     <Button type='' variant='outlined'>I'm Feeling Lucky</Button>
-                  </div>
-               ) : (
-                     <div className="">
-                        <Button className='buttonHidden' type='submit' onClick={search} variant='outlined'>Google Search</Button>
-                        <Button className='buttonHidden' type='' variant='outlined'>I'm Feeling Lucky</Button>
-                     </div>
-                  )
-            }
+
+            <div className="">
+               <Button className={!searchButtonHidden ? '' : 'buttonHidden'} type='submit' onClick={search} variant='outlined'>Google Search</Button>
+               <Button className={!searchButtonHidden ? '' : 'buttonHidden'} type='' variant='outlined'>I'm Feeling Lucky</Button>
+            </div>
+
 
          </div>
       </form>
