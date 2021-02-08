@@ -4,8 +4,10 @@ import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
 
 const Seacrch = ({ searchButtonHidden = false }) => {
+   const [{ }, dispatch] = useStateValue();
    const [Input, setInput] = useState('')
    const history = useHistory()
    const search = e => {
