@@ -3,12 +3,14 @@ import './search.css'
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const Seacrch = () => {
    const [Input, setInput] = useState('')
+   const history = useHistory()
    const search = e => {
       e.preventDefault();
-      alert('This is Worked ');
+      history.push('/search')
    }
    console.log(Input);
    return (
