@@ -40,7 +40,7 @@ const Home = () => {
                </div>
                <div className="google-seacrch-input">
                   {/* Seacrh Conponent here  */}
-                  <Seacrch></Seacrch>
+                  <Seacrch ></Seacrch>
                </div>
             </div>
          </div>
