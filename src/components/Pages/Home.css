@@ -1,5 +1,7 @@
 .header_right{
    text-align: right;
+   margin-top: 20px;
+   
 }
 .header_right ul{
      list-style: none;
@@ -7,11 +9,12 @@
    
 }
 .header_right ul li a {
-    padding: 10px 10px;
-   
-    color: #111111;
+   padding: 10px 10px;
+    font-size: 15px;
+    color: #000000ad;
     list-style: none;
-    text-decoration:none ;
+    text-decoration: none;
+    font-weight: 500;
 
 }
 .header_right ul li a:hover{
@@ -35,4 +38,12 @@ margin-right: 50px;
 .nav-link {
     display: inline;
    
+}
+.google-icon{
+   text-align: center;
+}
+.google-icon img{
+   
+   height: 100px;
+   width: auto;
 }
