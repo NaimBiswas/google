@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import { Dropdown, NavItem, NavLink } from 'react-bootstrap';
+import Seacrch from '../Seacrch';
 
 const Home = () => {
    return (
@@ -39,6 +40,7 @@ const Home = () => {
                </div>
                <div className="google-seacrch-input">
                   {/* Seacrh Conponent here  */}
+                  <Seacrch></Seacrch>
                </div>
             </div>
          </div>
