@@ -19,7 +19,7 @@ const Seacrch = () => {
             <MicIcon className='search_micIcon'></MicIcon>
          </div>
          <div className="search-button  text-center mt-4">
-            <Button onClick={search} variant='outlined'>Google Search</Button>
+            <Button type='submit' onClick={search} variant='outlined'>Google Search</Button>
             <Button variant='outlined'>I'm Feeling Lucky</Button>
          </div>
       </form>
