@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './components/Pages/Home';
 import { Search } from '@material-ui/icons';
+import SearchPage from './components/SearchPage';
 
 function App() {
    return (
@@ -14,7 +15,7 @@ function App() {
                <Switch>
                   {/* search page  */}
                   <Route path='/search' >
-                     <h1>This is search page</h1>
+                     <SearchPage></SearchPage>
                   </Route>
 
 
