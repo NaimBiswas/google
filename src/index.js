@@ -6,10 +6,11 @@ import store from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './reducer';
 
 ReactDOM.render(
    <React.StrictMode>
-      <StateProvider>
+      <StateProvider initialState={initialState} reducer={reducer}>
          <App />
       </StateProvider>
 
