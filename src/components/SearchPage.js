@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-
+import './SearchPage.css'
 const SearchPage = () => {
    return (
 
