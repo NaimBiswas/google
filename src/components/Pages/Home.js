@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import './Home.css'
 import AppsIcon from '@material-ui/icons/Apps';
 import { Link } from 'react-router-dom';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import { Dropdown, NavItem, NavLink } from 'react-bootstrap';
 
@@ -15,17 +16,19 @@ const Home = () => {
                   <ul>
                      <li><Link to='/gmail'>Gmail</Link></li>
                      <li><Link to='/images'>Images</Link></li>
+
                      <li>
 
                         <Dropdown as={NavItem}>
                            <Dropdown.Toggle as={NavLink}>
-                              <AppsIcon className='appIcons'></AppsIcon>
+                              <AppsIcon ></AppsIcon>
                            </Dropdown.Toggle>
                            <Dropdown.Menu className='showName'>
                               <Dropdown.Item>Hello there!</Dropdown.Item>
                            </Dropdown.Menu>
                         </Dropdown>
                      </li>
+                     <li className='appIcons'><Link to='/account'><AccountCircleIcon fontSize='large'></AccountCircleIcon ></Link></li>
                   </ul>
 
                </div>

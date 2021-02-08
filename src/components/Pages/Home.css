@@ -10,8 +10,8 @@
 }
 .header_right ul li a {
    padding: 10px 10px;
-    font-size: 15px;
-    color: #000000ad;
+    font-size: 14px;
+    color: #000000cf;
     list-style: none;
     text-decoration: none;
     font-weight: 500;
@@ -22,7 +22,7 @@
 }
 
 .appIcons{
-margin-right: 50px;
+ padding-right: 25px;
 }
 .dropdown-toggle::after {
     display: none ;
