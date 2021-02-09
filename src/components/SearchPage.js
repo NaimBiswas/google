@@ -4,6 +4,7 @@ import { useStateValue } from '../StateProvider'
 const SearchPage = () => {
    const [{ term }, dispatch] = useStateValue()
    return (
+      // https://www.googleapis.com/customsearch/v1?[parameters]
 
       <div className="SearchPage">
          <div className="searchPage-header">
