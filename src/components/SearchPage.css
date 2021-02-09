@@ -1,0 +1,24 @@
+.searchPage-header{
+   display: flex;
+   position: sticky;
+   width: 100%;
+   top: 0;
+   background: #ffffff;
+   z-index: 133333;
+   padding: 30px;
+   border-bottom: 1px solid lightgray;
+  align-items: flex-start;  
+}
+
+.searchPage_logo{
+   height: 40px;
+ 
+   object-fit: contain;
+   margin-right: 50px;
+}
+.searchPageHader_body .search-input{
+   margin: unset;
+   margin-top: 0;
+ width: auto;
+ max-width: 900px; 
+}

@@ -25,7 +25,7 @@ const Seacrch = ({ searchButtonHidden = false }) => {
       <form>
          <div className="search-input">
             <SearchIcon className='search_inputIcon'></SearchIcon>
-            <input value={Input} onChange={e => setInput(e.target.value)} className='input' type="text" />
+            <input size='70' value={Input} onChange={e => setInput(e.target.value)} className='input' type="text" />
             <MicIcon className='search_micIcon'></MicIcon>
          </div>
          <div className="search-button  text-center mt-4">
