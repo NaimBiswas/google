@@ -32,7 +32,7 @@ const SearchPage = () => {
             <div className="searchPageHader_body">
                <Search searchButtonHidden></Search>
                <div className="searcHeader_option justify-content-between d-flex">
-                  <ul>
+                  <ul className='mr-4'>
                      <Link to='/' className='nav-link pr-0'><SearchIcon color='secondary'></SearchIcon> All</Link>
                      <Link to='/' className='nav-link pr-0'><ImageIcon color='primary' />Images</Link>
                      <Link to='/' className='nav-link pr-0'><YouTubeIcon color='secondary' />Videos</Link>
@@ -48,9 +48,20 @@ const SearchPage = () => {
                </div>
             </div>
          </div>
-         <div className="searchPage-result">
+         {term ? (
+            <>
+               <div className="searchPage-result ">
+                  <p className='searchPage_resultCount '>
+                     About   results  for {`"${term}"`}
+                  </p>
+               </div>
+            </>
 
-         </div>
+
+         ) : (
+               <h2>No result found</h2>
+            )
+         }
       </div>
 
    )
