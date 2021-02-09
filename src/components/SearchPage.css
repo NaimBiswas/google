@@ -1,8 +1,8 @@
 .searchPage-header{
    display: flex;
-   position: sticky;
+  
    width: 100%;
-   top: 0;
+   
    background: #ffffff;
    z-index: 133333;
    padding: 30px;
@@ -31,4 +31,12 @@
        margin-top: 40px;
     margin-bottom: -15px;
 
+}
+.searchPage-result {
+   margin-left: 198px;
+    max-width: 600px;
+}
+p.searchPage_resultCount {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }

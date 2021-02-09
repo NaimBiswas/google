@@ -10,11 +10,13 @@ import SearchPage from './components/SearchPage';
 function App() {
    return (
       <Fragment>
-         <div style={{ minHeight: '100vh', }} className="App">
+         <div style={{
+            minHeight: '100vh', backgroundColor: '#ffffff'
+         }} className="App">
             <Router>
-               <Switch>
+               < Switch >
                   {/* search page  */}
-                  <Route path='/search' >
+                  < Route path='/search' >
                      <SearchPage></SearchPage>
                   </Route>
 
@@ -25,10 +27,10 @@ function App() {
                   </Route>
 
                </Switch>
-            </Router>
+            </Router >
 
-         </div>
-      </Fragment>
+         </div >
+      </Fragment >
 
    );
 }

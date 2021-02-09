@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import './SearchPage.css'
 import { useStateValue } from '../StateProvider'
 import useGoogleSearch from '../useGoogleSearch'
 import Response from '../response'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Search from './Seacrch'
 import SearchIcon from '@material-ui/icons/Search';
 import ImageIcon from '@material-ui/icons/Image';
@@ -13,12 +13,15 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import DescriptionIcon from '@material-ui/icons/Description';
 
 
+import MicIcon from '@material-ui/icons/Mic';
+import { Button } from 'react-bootstrap'
+
+
 const SearchPage = () => {
    const [{ term }, dispatch] = useStateValue()
+
    const { data } = useGoogleSearch(term)
 
-   // const data = Response;
-   console.log(data);
 
 
 
@@ -31,9 +34,10 @@ const SearchPage = () => {
             </Link>
             <div className="searchPageHader_body">
                <Search searchButtonHidden></Search>
+
                <div className="searcHeader_option justify-content-between d-flex">
                   <ul className='mr-4'>
-                     <Link to='/' className='nav-link pr-0'><SearchIcon color='secondary'></SearchIcon> All</Link>
+                     <Link style={{ borderBottom: '3px solid #ff0000c2', paddingBottom: '34px' }} to='/' className='nav-link pr-0'><SearchIcon color='secondary'></SearchIcon> All</Link>
                      <Link to='/' className='nav-link pr-0'><ImageIcon color='primary' />Images</Link>
                      <Link to='/' className='nav-link pr-0'><YouTubeIcon color='secondary' />Videos</Link>
                      <Link to='/' className='nav-link pr-0'><DescriptionIcon color='disabled' /> News</Link>
@@ -48,19 +52,31 @@ const SearchPage = () => {
                </div>
             </div>
          </div>
-         {term ? (
+         {term && (
             <>
                <div className="searchPage-result ">
                   <p className='searchPage_resultCount '>
-                     About   results  for {`"${term}"`}
+                     About {data?.searchInformation.formattedTotalResults}  results ({data?.searchInformation.formattedSearchTime}s)  for   {`"${term}"`}
                   </p>
+
+
+                  {
+                     data?.items.map(item => (
+                        <div key={item.cacheId} className="searchResults">
+                           <a href={item.link}>
+                              {item.displayLink}
+                           </a>
+                           <h2>{item.title}</h2>
+                           <p>{item.snippet}</p>
+                        </div>
+                     ))
+                  }
+
                </div>
             </>
 
 
-         ) : (
-               <h2>No result found</h2>
-            )
+         )
          }
       </div>
 
