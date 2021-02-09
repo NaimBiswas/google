@@ -22,3 +22,8 @@
  width: auto;
  max-width: 900px; 
 }
+.searcHeader_option a{
+   color: rgb(110, 110, 110);
+   font-weight: 500;
+   font-size: 14px;
+}

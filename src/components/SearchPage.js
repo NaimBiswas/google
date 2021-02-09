@@ -5,13 +5,12 @@ import useGoogleSearch from '../useGoogleSearch'
 import Response from '../response'
 import { Link } from 'react-router-dom'
 import Search from './Seacrch'
-
-
-
-
-
-
-
+import SearchIcon from '@material-ui/icons/Search';
+import ImageIcon from '@material-ui/icons/Image';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import DescriptionIcon from '@material-ui/icons/Description';
 
 
 const SearchPage = () => {
@@ -34,16 +33,17 @@ const SearchPage = () => {
                <Search searchButtonHidden></Search>
                <div className="searcHeader_option justify-content-between d-flex">
                   <ul>
-                     <li className='nav-link pr-0'>All</li>
-                     <li className='nav-link'>All</li>
-                     <li className='nav-link pr-0'>All</li>
-                     <li className='nav-link pr-0'>All</li>
-                     <li className='nav-link pr-0'>All</li>
-                     <li className='nav-link pr-0'>All</li>
+                     <Link to='/' className='nav-link pr-0'><SearchIcon color='secondary'></SearchIcon> All</Link>
+                     <Link to='/' className='nav-link pr-0'><ImageIcon color='primary' />Images</Link>
+                     <Link to='/' className='nav-link pr-0'><YouTubeIcon color='secondary' />Videos</Link>
+                     <Link to='/' className='nav-link pr-0'><DescriptionIcon color='disabled' /> News</Link>
+                     <Link to='/' className='nav-link pr-0'><NotListedLocationIcon color='error' />Maps</Link>
+                     <Link to='/' className='nav-link pr-0'><MoreVertIcon color='primary' className='mr-0' />More</Link>
                   </ul>
                   <ul>
-                     <li className='nav-link pr-0'>Li</li>
-                     <li className='nav-link pr-0'>Li</li>
+                     <Link to='/' className='nav-link pr-0'>Setting</Link>
+                     <Link to='/' className='nav-link pr-0'>Tool</Link>
+
                   </ul>
                </div>
             </div>
