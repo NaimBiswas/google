@@ -21,6 +21,15 @@
    background-color: transparent;
     outline: none;
     width: 100%;
+}.dark-input {
+    flex: 1 1;
+    padding: 5px 20px;
+    border: none;
+    font-size: medium;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    color: aliceblue;
 }
 .search-input input:focus {
     outline-width: 0;

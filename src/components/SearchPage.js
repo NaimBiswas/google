@@ -17,7 +17,7 @@ import MicIcon from '@material-ui/icons/Mic';
 import { Button } from 'react-bootstrap'
 
 
-const SearchPage = () => {
+const SearchPage = ({ color }) => {
    const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
@@ -28,7 +28,7 @@ const SearchPage = () => {
    return (
 
       <div className="SearchPage">
-         <div className="searchPage-header">
+         <div className={`searchPage-header ${color ? 'dark' : ''}`}>
             <Link to='/'>
                <img className='searchPage_logo' src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
             </Link>
@@ -37,16 +37,16 @@ const SearchPage = () => {
 
                <div className="searcHeader_option justify-content-between d-flex">
                   <ul className='mr-4'>
-                     <Link style={{ borderBottom: '3px solid #ff0000c2', paddingBottom: '34px' }} to='/' className='nav-link pr-0'><SearchIcon color='secondary'></SearchIcon> All</Link>
-                     <Link to='/' className='nav-link pr-0'><ImageIcon color='primary' />Images</Link>
-                     <Link to='/' className='nav-link pr-0'><YouTubeIcon color='secondary' />Videos</Link>
-                     <Link to='/' className='nav-link pr-0'><DescriptionIcon color='disabled' /> News</Link>
-                     <Link to='/' className='nav-link pr-0'><NotListedLocationIcon color='error' />Maps</Link>
-                     <Link to='/' className='nav-link pr-0'><MoreVertIcon color='primary' className='mr-0' />More</Link>
+                     <Link style={{ borderBottom: '3px solid #ff0000c2', paddingBottom: '34px' }} to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><SearchIcon color='secondary'></SearchIcon> All</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><ImageIcon color='primary' />Images</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><YouTubeIcon color='secondary' />Videos</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><DescriptionIcon color='disabled' /> News</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><NotListedLocationIcon color='error' />Maps</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><MoreVertIcon color='primary' className='mr-0' />More</Link>
                   </ul>
                   <ul>
-                     <Link to='/' className='nav-link pr-0'>Setting</Link>
-                     <Link to='/' className='nav-link pr-0'>Tool</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}>Setting</Link>
+                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}>Tool</Link>
 
                   </ul>
                </div>

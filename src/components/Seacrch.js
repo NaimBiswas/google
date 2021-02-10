@@ -8,7 +8,7 @@ import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
 
-const Seacrch = ({ searchButtonHidden = false }) => {
+const Seacrch = ({ searchButtonHidden = false, color }) => {
    const history = useHistory()
    const [{ }, dispatch] = useStateValue()
    const [input, setInput] = useState("")
@@ -36,8 +36,8 @@ const Seacrch = ({ searchButtonHidden = false }) => {
 
       <form onSubmit={search} >
          <div className="search-input">
-            <SearchIcon className='search_inputIcon'></SearchIcon>
-            <input name='name' required value={input} onChange={changeHandeler} className='input' type="text" />
+            <SearchIcon className={`search_inputIcon ${color ? 'text-white' : ''}`}></SearchIcon>
+            <input name='name' required value={input} onChange={changeHandeler} className=' input' type="text" />
             <MicIcon className='search_micIcon'></MicIcon>
 
          </div>
