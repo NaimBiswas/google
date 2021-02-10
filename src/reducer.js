@@ -1,5 +1,5 @@
 export const initialState = {
-   term: '',
+   term: null
 }
 
 export const actionTypes = {
@@ -7,16 +7,16 @@ export const actionTypes = {
 }
 
 
-const reducer = (action, state) => {
-   console.log(action);
+const reducer = (state, action) => {
+
    switch (action.type) {
       case actionTypes.SET_SEARCH_TERM:
          return {
             ...state,
             term: action.term
-         }
+         };
       default:
-         return state
+         return state;
    }
 }
 

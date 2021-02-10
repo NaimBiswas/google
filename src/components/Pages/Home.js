@@ -6,8 +6,10 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 
 import { Dropdown, NavItem, NavLink } from 'react-bootstrap';
 import Seacrch from '../Seacrch';
+import { Button } from 'react-bootstrap';
 
-const Home = () => {
+const Home = ({ value, color }) => {
+
    return (
       <Fragment>
          <div className="home">
@@ -29,7 +31,11 @@ const Home = () => {
                            </Dropdown.Menu>
                         </Dropdown>
                      </li>
-                     <li className='appIcons'><Link to='/account'><AccountCircleIcon fontSize='large' color='action'></AccountCircleIcon ></Link></li>
+                     <li className='appIcons'><Link to='/account'><AccountCircleIcon fontSize='large' color='action'></AccountCircleIcon ></Link>
+                     </li>
+                     <li className='appIcons'>
+                        <button onClick={() => value(preMode => !preMode)} >Change Color</button>
+                     </li>
                   </ul>
 
                </div>
@@ -44,7 +50,7 @@ const Home = () => {
                </div>
             </div>
          </div>
-      </Fragment>
+      </Fragment >
    )
 }
 

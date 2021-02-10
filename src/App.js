@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,12 +8,13 @@ import Home from './components/Pages/Home';
 import SearchPage from './components/SearchPage';
 
 function App() {
+   const [ChangeBG, setChangeBG] = useState(true)
    return (
       <Fragment>
          <div style={{
-            minHeight: '100vh', backgroundColor: '#ffffff'
-         }} className="App">
-            <Router>
+            minHeight: '100vh',
+         }} className={`App ${ChangeBG ? 'dark' : 'white'}`}>
+            <Router >
                < Switch >
                   {/* search page  */}
                   < Route path='/search' >
@@ -23,7 +24,7 @@ function App() {
 
                   {/* HOme  */}
                   <Route path='/' >
-                     <Home></Home>
+                     <Home color={ChangeBG} value={setChangeBG}></Home>
                   </Route>
 
                </Switch>

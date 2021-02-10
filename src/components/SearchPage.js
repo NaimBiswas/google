@@ -18,7 +18,7 @@ import { Button } from 'react-bootstrap'
 
 
 const SearchPage = () => {
-   const [{ term }, dispatch] = useStateValue()
+   const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
 
@@ -52,30 +52,26 @@ const SearchPage = () => {
                </div>
             </div>
          </div>
+
          {term && (
-            <>
-               <div className="searchPage-result ">
-                  <p className='searchPage_resultCount '>
-                     About {data?.searchInformation.formattedTotalResults}  results ({data?.searchInformation.formattedSearchTime}s)  for   {`"${term}"`}
-                  </p>
+            <div className="searchPage-result ">
+               <p className='searchPage_resultCount '>
+                  About {data?.searchInformation.formattedTotalResults}  results ({data?.searchInformation.formattedSearchTime}s)  for   {`"${term}"`}
+               </p>
 
+               {
+                  data?.items.map(item => (
+                     <div key={item.cacheId} className="searchResults">
+                        <a href={item.link}>
+                           {item.displayLink}
+                        </a>
+                        <h2>{item.title}</h2>
+                        <p>{item.snippet}</p>
+                     </div>
+                  ))
+               }
 
-                  {
-                     data?.items.map(item => (
-                        <div key={item.cacheId} className="searchResults">
-                           <a href={item.link}>
-                              {item.displayLink}
-                           </a>
-                           <h2>{item.title}</h2>
-                           <p>{item.snippet}</p>
-                        </div>
-                     ))
-                  }
-
-               </div>
-            </>
-
-
+            </div>
          )
          }
       </div>

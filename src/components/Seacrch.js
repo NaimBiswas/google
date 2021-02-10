@@ -9,38 +9,52 @@ import { actionTypes } from '../reducer';
 
 
 const Seacrch = ({ searchButtonHidden = false }) => {
-   const [Input, setInput] = useState(null)
-   const [sRedirect, setRedirect] = useState({ redirect: '/search' })
-   const [{ }, dispatch] = useStateValue()
    const history = useHistory()
+   const [{ }, dispatch] = useStateValue()
+   const [input, setInput] = useState("")
+
+   const changeHandeler = (e) => {
+
+      setInput(e.target.value)
+
+   }
+
 
    const search = (e) => {
       e.preventDefault();
+
       dispatch({
          type: actionTypes.SET_SEARCH_TERM,
-         term: Input,
-      })
+         term: input,
+      });
+      history.push("/search");
+   };
 
-      history.go('/search')
-   }
 
 
    return (
 
-      <form>
+      <form onSubmit={search} >
          <div className="search-input">
             <SearchIcon className='search_inputIcon'></SearchIcon>
-            <input value={Input} onChange={e => setInput(e.target.value)} className='input' type="text" />
+            <input name='name' required value={input} onChange={changeHandeler} className='input' type="text" />
             <MicIcon className='search_micIcon'></MicIcon>
 
          </div>
          <div className="search-button  text-center mt-4">
+            {!searchButtonHidden ? (
+               <div className="">
+                  <Button className='' type='submit' variant='outlined'>Google Search</Button>
+                  <Button className='' type='' variant='outlined'>I'm Feeling Lucky</Button>
+               </div>
+            ) : (
+                  <div className="">
+                     <Button className='buttonHidden' type='submit' variant='outlined'>Google Search</Button>
+                     <Button className='buttonHidden' type='' variant='outlined'>I'm Feeling Lucky</Button>
+                  </div>
+               )}
 
 
-            <div className="">
-               <Button className={!searchButtonHidden ? '' : 'buttonHidden'} type='submit' onClick={search} variant='outlined'>Google Search</Button>
-               <Button className={!searchButtonHidden ? '' : 'buttonHidden'} type='' variant='outlined'>I'm Feeling Lucky</Button>
-            </div>
 
 
          </div>
