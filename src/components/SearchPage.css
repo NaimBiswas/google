@@ -58,6 +58,7 @@ background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
    color: #ffffff;
    border: 1px solid wheat;
    outline: none;
+   border-radius: 888888888888px;
 }
 .darkButton:focus{
    box-shadow: none;
@@ -69,6 +70,7 @@ background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
    color: black;
    border: 1px solid rgba(0, 0, 0, 0.849);
    outline: none;
+   border-radius: 888888888888px;
 }
 
 .searchResult-header{
