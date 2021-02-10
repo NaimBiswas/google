@@ -17,21 +17,21 @@ const Home = ({ value, color }) => {
 
                <div className="header_right">
                   <ul>
-                     <li><Link to='/gmail'>Gmail</Link></li>
-                     <li><Link to='/images'>Images</Link></li>
+                     <li ><Link className={color ? 'text-white' : ''} to='/gmail'>Gmail</Link></li>
+                     <li><Link className={color ? 'text-white' : ''} to='/images'>Images</Link></li>
 
                      <li>
 
                         <Dropdown as={NavItem}>
                            <Dropdown.Toggle as={NavLink}>
-                              <AppsIcon ></AppsIcon>
+                              <AppsIcon className={color ? 'text-white' : ''} ></AppsIcon>
                            </Dropdown.Toggle>
                            <Dropdown.Menu className='showName'>
-                              <Dropdown.Item>Hello there!</Dropdown.Item>
+                              <Dropdown.Item className={color ? 'text-white' : ''} >Hello there!</Dropdown.Item>
                            </Dropdown.Menu>
                         </Dropdown>
                      </li>
-                     <li className='appIcons'><Link to='/account'><AccountCircleIcon fontSize='large' color='action'></AccountCircleIcon ></Link>
+                     <li className='appIcons'><Link to='/account'><AccountCircleIcon className={color ? 'text-white' : ''} fontSize='large' color='action'></AccountCircleIcon ></Link>
                      </li>
                      <li className='appIcons'>
                         <button onClick={() => value(preMode => !preMode)} >Change Color</button>
@@ -46,7 +46,7 @@ const Home = ({ value, color }) => {
                </div>
                <div className="google-seacrch-input">
                   {/* Seacrh Conponent here  */}
-                  <Seacrch ></Seacrch>
+                  <Seacrch></Seacrch>
                </div>
             </div>
          </div>

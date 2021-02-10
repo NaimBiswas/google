@@ -18,7 +18,7 @@ function App() {
                < Switch >
                   {/* search page  */}
                   < Route path='/search' >
-                     <SearchPage></SearchPage>
+                     <SearchPage color={ChangeBG}></SearchPage>
                   </Route>
 
 
