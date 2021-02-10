@@ -34,7 +34,7 @@ const Home = ({ value, color }) => {
                      <li className='appIcons'><Link to='/account'><AccountCircleIcon className={color ? 'text-white' : ''} fontSize='large' color='action'></AccountCircleIcon ></Link>
                      </li>
                      <li className='appIcons'>
-                        <button onClick={() => value(preMode => !preMode)} >Change Color</button>
+                        <button className='dark btn btn-lg' onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
                      </li>
                   </ul>
 
