@@ -60,25 +60,25 @@ const SearchPage = ({ color, value }) => {
 
             </div>
 
-            <div style={{ position: 'absolute', right: '30', zIndex: '0000009999999' }} className="Button">
-               <button className='darkButton btn btn-lg' onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
+            <div style={{ position: 'absolute', right: '30px', zIndex: '0000009999999' }} className="Button">
+               <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
             </div>
          </div>
 
          {term && (
-            <div className="searchPage-result ">
+            <div className="searchPage-result  ">
                <p className='searchPage_resultCount '>
                   About {data?.searchInformation.formattedTotalResults}  results ({data?.searchInformation.formattedSearchTime}s)  for   {`"${term}"`}
                </p>
 
                {
                   data?.items.map(item => (
-                     <div key={item.cacheId} className="searchResults">
-                        <a href={item.link}>
+                     <div key={item.cacheId} className="searchResults pb-5">
+                        <a className='searchResult-link' href={item.link}>
                            {item.displayLink}
                         </a>
-                        <h2>{item.title}</h2>
-                        <p>{item.snippet}</p>
+                        <h2 className='searchResult-header'>{item.title}</h2>
+                        <p className='searchResult-description'>{item.snippet}</p>
                      </div>
                   ))
                }

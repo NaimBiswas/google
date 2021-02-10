@@ -62,9 +62,30 @@ background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
 .darkButton:focus{
    box-shadow: none;
 }
+.buttonLight:focus{
+   box-shadow: none;
+}
+.buttonLight{
+   color: black;
+   border: 1px solid rgba(0, 0, 0, 0.849);
+   outline: none;
+}
 
-
-
+.searchResult-header{
+   font-weight: 500;
+    font-size: 28px;
+}
+.searchResult-link{
+   font-weight: 500;
+    font-size: 18px;
+}
+.searchResult-description{
+   font-size: 19px;
+    font-weight: 500;
+    padding-top: 5px;
+    letter-spacing: 1.2px;
+    line-height: 24px;
+}
 
 
 
