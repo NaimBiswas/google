@@ -88,7 +88,11 @@ background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
     letter-spacing: 1.2px;
     line-height: 24px;
 }
-
+@media(max-width: 946px){
+   .Button{
+      display: none;
+   }
+}
 
 
 
