@@ -27,14 +27,14 @@ const Home = ({ value, color }) => {
                               <AppsIcon className={color ? 'text-white' : ''} ></AppsIcon>
                            </Dropdown.Toggle>
                            <Dropdown.Menu className='showName'>
-                              <Dropdown.Item className={color ? 'text-white' : ''} >Hello there!</Dropdown.Item>
+                              <Dropdown.Item className={color ? 'text-dark' : ''} >Hello there!</Dropdown.Item>
                            </Dropdown.Menu>
                         </Dropdown>
                      </li>
                      <li className='appIcons'><Link to='/account'><AccountCircleIcon className={color ? 'text-white' : ''} fontSize='large' color='action'></AccountCircleIcon ></Link>
                      </li>
                      <li className='appIcons'>
-                        <button className='dark btn btn-lg' onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
+                        <button className='darkButton btn btn-lg' onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
                      </li>
                   </ul>
 

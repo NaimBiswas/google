@@ -17,7 +17,7 @@ import MicIcon from '@material-ui/icons/Mic';
 import { Button } from 'react-bootstrap'
 
 
-const SearchPage = ({ color }) => {
+const SearchPage = ({ color, value }) => {
    const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
@@ -28,12 +28,18 @@ const SearchPage = ({ color }) => {
    return (
 
       <div className="SearchPage">
-         <div className={`searchPage-header ${color ? 'dark' : ''}`}>
+         <div className={`searchPage-header  ${color ? 'dark' : ''}`}>
+
             <Link to='/'>
                <img className='searchPage_logo' src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
             </Link>
+
             <div className="searchPageHader_body">
                <Search searchButtonHidden></Search>
+
+
+
+
 
                <div className="searcHeader_option justify-content-between d-flex">
                   <ul className='mr-4'>
@@ -50,6 +56,12 @@ const SearchPage = ({ color }) => {
 
                   </ul>
                </div>
+
+
+            </div>
+
+            <div style={{ position: 'absolute', right: '30', zIndex: '0000009999999' }} className="Button">
+               <button className='darkButton btn btn-lg' onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
             </div>
          </div>
 

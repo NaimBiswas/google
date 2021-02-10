@@ -51,8 +51,17 @@ background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
 
    color: #ffffff;
 }
+.darkButton{
+   background-color: #FF9A8B;
+background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
 
-
+   color: #ffffff;
+   border: 1px solid wheat;
+   outline: none;
+}
+.darkButton:focus{
+   box-shadow: none;
+}
 
 
 
