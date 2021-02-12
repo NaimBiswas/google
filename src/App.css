@@ -7,4 +7,20 @@ background-color: #ae8bff;
 background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
    color: #ffffff;
 }
+/* .dark{
+  
+    background:linear-gradient(-45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+     background-size: 600%;
+     animation: anime 4s linear infinite;
+      color: #0B0D0E;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+ @keyframes anime {
+   0%{ background-position:0% 50%}
+   50%{background-position: 100% 50%}
+   100%{background-position: 0% 50%}
 
+} */
