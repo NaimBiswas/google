@@ -14,7 +14,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 
 
 import MicIcon from '@material-ui/icons/Mic';
-import { Button } from 'react-bootstrap'
+import { Button, Spinner } from 'react-bootstrap'
 
 
 const SearchPage = ({ color, value }) => {
@@ -81,6 +81,15 @@ const SearchPage = ({ color, value }) => {
                         <p className='searchResult-description'>{item.snippet}</p>
                      </div>
                   ))
+               }
+               {
+                  !data && (
+                     <div className="text-left pb-5 pt-5">
+                        <Spinner animation="border" role="status" variant='info'>
+                           <span className="sr-only">Loading...</span>
+                        </Spinner>
+                     </div>
+                  )
                }
 
             </div>
