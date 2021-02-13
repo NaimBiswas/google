@@ -3,14 +3,9 @@ import './SearchPage.css'
 import { useStateValue } from '../StateProvider'
 import useGoogleSearch from '../useGoogleSearch'
 import Response from '../response'
-import { Nav, Link, useHistory, NavLink } from 'react-router-dom'
+import { Link, useHistory, NavLink } from 'react-router-dom'
 import Search from './Seacrch'
-import SearchIcon from '@material-ui/icons/Search';
-import ImageIcon from '@material-ui/icons/Image';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import DescriptionIcon from '@material-ui/icons/Description';
+
 
 
 import MicIcon from '@material-ui/icons/Mic';
@@ -22,7 +17,6 @@ const SearchPage = ({ color, value }) => {
    const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
-
 
 
 

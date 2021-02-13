@@ -51,14 +51,19 @@ const Images = ({ value, color }) => {
                   About {data?.searchInformation.formattedTotalResults}  results ({data?.searchInformation.formattedSearchTime}s)  for   {`"${term}"`}
                </p>
 
+
                {
                   data?.items.map((item, index) => (
-                     <div key={index} className="searchResults pb-5">
-                        <img src={item.pagemap.cse_image[0].src} alt="" />
+                     <div key={index} className="searchImageResults">
+                        {item.pagemap.cse_image[0].src && (
+                           <img className='img-fluid max-width: 100%' src={item.pagemap.cse_image[0].src} alt="" />
+
+                        )}
 
                      </div>
                   ))
                }
+
                {
                   !data && (
                      <div className="text-left pb-5 pt-5">
