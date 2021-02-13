@@ -3,12 +3,7 @@ import { Spinner } from 'react-bootstrap'
 import { Link, NavLink } from 'react-router-dom'
 import Search from '../Seacrch'
 import '../search.css'
-import SearchIcon from '@material-ui/icons/Search';
-import ImageIcon from '@material-ui/icons/Image';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import NotListedLocationIcon from '@material-ui/icons/NotListedLocation';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import DescriptionIcon from '@material-ui/icons/Description';
+
 import { useStateValue } from '../../StateProvider'
 import useGoogleSearch from '../../useGoogleSearch'
 import ResultsNav from '../ResultsNav'
@@ -56,8 +51,8 @@ const Images = ({ value, color }) => {
                </p>
 
                {
-                  data?.items.map(item => (
-                     <div key={item.cacheId} className="searchResults pb-5">
+                  data?.items.map((item, index) => (
+                     <div key={index} className="searchResults pb-5">
                         <a className='searchResult-link' href={item.link}>
                            {item.displayLink}
                         </a>

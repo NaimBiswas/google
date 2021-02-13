@@ -66,8 +66,8 @@ const SearchPage = ({ color, value }) => {
                </p>
 
                {
-                  data?.items.map(item => (
-                     <div key={item.cacheId} className="searchResults pb-5">
+                  data?.items.map((item, index) => (
+                     <div key={index} className="searchResults pb-5">
                         <a className='searchResult-link' href={item.link}>
                            {item.displayLink}
                         </a>
