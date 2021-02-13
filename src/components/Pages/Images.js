@@ -12,6 +12,7 @@ const Images = ({ value, color }) => {
    const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
+   console.log(data);
    return (
       <div className="SearchPage">
          <div className={`searchPage-header  ${color ? 'dark' : ''}`}>
@@ -53,11 +54,8 @@ const Images = ({ value, color }) => {
                {
                   data?.items.map((item, index) => (
                      <div key={index} className="searchResults pb-5">
-                        <a className='searchResult-link' href={item.link}>
-                           {item.displayLink}
-                        </a>
-                        <h2 className='searchResult-header'>{item.title}</h2>
-                        <p className='searchResult-description'>{item.snippet}</p>
+                        <img src={item.pagemap.cse_image[0].src} alt="" />
+
                      </div>
                   ))
                }
