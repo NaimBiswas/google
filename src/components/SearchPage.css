@@ -93,7 +93,10 @@ background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)
       display: none;
    }
 }
-
+.active{
+   border-bottom: 3px solid #ff0000c2;
+   padding-bottom: 34px;
+}
 
 
 

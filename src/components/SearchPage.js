@@ -3,7 +3,7 @@ import './SearchPage.css'
 import { useStateValue } from '../StateProvider'
 import useGoogleSearch from '../useGoogleSearch'
 import Response from '../response'
-import { Link, useHistory } from 'react-router-dom'
+import { Nav, Link, useHistory, NavLink } from 'react-router-dom'
 import Search from './Seacrch'
 import SearchIcon from '@material-ui/icons/Search';
 import ImageIcon from '@material-ui/icons/Image';
@@ -15,6 +15,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 
 import MicIcon from '@material-ui/icons/Mic';
 import { Button, Spinner } from 'react-bootstrap'
+import ResultsNav from './ResultsNav'
 
 
 const SearchPage = ({ color, value }) => {
@@ -42,14 +43,7 @@ const SearchPage = ({ color, value }) => {
 
 
                <div className="searcHeader_option justify-content-between d-flex">
-                  <ul className='mr-4'>
-                     <Link style={{ borderBottom: '3px solid #ff0000c2', paddingBottom: '34px' }} to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><SearchIcon color='secondary'></SearchIcon> All</Link>
-                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><ImageIcon color='primary' />Images</Link>
-                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><YouTubeIcon color='secondary' />Videos</Link>
-                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><DescriptionIcon color='disabled' /> News</Link>
-                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><NotListedLocationIcon color='error' />Maps</Link>
-                     <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}><MoreVertIcon color='primary' className='mr-0' />More</Link>
-                  </ul>
+                  <ResultsNav value={value} color={color}></ResultsNav>
                   <ul>
                      <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}>Setting</Link>
                      <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}>Tool</Link>

@@ -6,6 +6,7 @@ import './App.css';
 import Home from './components/Pages/Home';
 
 import SearchPage from './components/SearchPage';
+import Images from './components/Pages/Images';
 
 function App() {
    const [ChangeBG, setChangeBG] = useState(true)
@@ -17,6 +18,9 @@ function App() {
             <Router >
                < Switch >
                   {/* search page  */}
+                  <Route path='/images'>
+                     <Images color={ChangeBG} value={setChangeBG}></Images>
+                  </Route>
                   < Route path='/search' >
                      <SearchPage color={ChangeBG} value={setChangeBG}></SearchPage>
                   </Route>
