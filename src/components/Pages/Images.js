@@ -55,10 +55,14 @@ const Images = ({ value, color }) => {
                {
                   data?.items.map((item, index) => (
                      <div key={index} className="searchImageResults">
-                        {item.pagemap.cse_image[0].src && (
-                           <img className='img-fluid max-width: 100%' src={item.pagemap.cse_image[0].src} alt="" />
+                        {
+                           item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
+                              <img className='img-fluid max-width: 100%' src={item?.pagemap.cse_image[0].src} alt="" />
+                           )
+                        }
 
-                        )}
+
+
 
                      </div>
                   ))
