@@ -9,7 +9,7 @@ import SearchPage from './components/SearchPage';
 import Images from './components/Pages/Images';
 
 function App() {
-   const [ChangeBG, setChangeBG] = useState(true)
+   const [ChangeBG, setChangeBG] = useState(false)
    return (
       <Fragment>
          <div style={{

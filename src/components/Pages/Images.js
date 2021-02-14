@@ -57,7 +57,7 @@ const Images = ({ value, color }) => {
                      <div key={index} className="searchImageResults">
                         {
                            item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src && (
-                              <img className='img-fluid max-width: 100%' src={item?.pagemap.cse_image[0].src} alt="" />
+                              <img className='img-fluid max-width: 100% mt-3 pb-4' src={item?.pagemap.cse_image[0].src} alt="" />
                            )
                         }
 

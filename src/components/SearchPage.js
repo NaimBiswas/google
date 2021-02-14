@@ -63,7 +63,7 @@ const SearchPage = ({ color, value }) => {
                   data?.items.map((item, index) => (
                      <div key={index} className="searchResults pb-5">
                         <a className='searchResult-link' href={item.link}>
-                           {item.displayLink}
+                           {item.displayLink} <span className='mt-1'>👇</span>
                         </a>
                         <h2 className='searchResult-header'>{item.title}</h2>
                         <p className='searchResult-description'>{item.snippet}</p>
