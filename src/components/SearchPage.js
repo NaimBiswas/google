@@ -30,7 +30,7 @@ const SearchPage = ({ color, value }) => {
             </Link>
 
             <div className="searchPageHader_body">
-               <Search searchButtonHidden></Search>
+               <Search color={color} searchButtonHidden></Search>
 
 
 
@@ -49,7 +49,7 @@ const SearchPage = ({ color, value }) => {
             </div>
 
             <div style={{ position: 'absolute', right: '30px', zIndex: '0000009999999' }} className="Button">
-               <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
+               <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Dark Mode'}</button>
             </div>
          </div>
 

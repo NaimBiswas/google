@@ -9,9 +9,25 @@
     margin-top: 40px;
     max-width: 560px;
 }
+.search-input-dark{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    border: 1px solid #f8f6f624;
+    border-radius: 80px;
+    padding: 5px 20px;
+    width: 75vw;
+    margin-top: 40px;
+    max-width: 560px;
+}
+
 .search-input:hover{
     outline: none;
     box-shadow: 1px 3px 6px 0px #00000036;;
+}
+.search-input-dark:hover{
+    outline: none;
+    box-shadow: 1px 3px 6px 0px #dfdfdf36;;
 }
 .search-input input {
     flex: 1 1;

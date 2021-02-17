@@ -3,9 +3,11 @@
    
 }
 .dark{
-background-color: #ae8bff;
+/* background-color: #ae8bff;
 background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
-   color: #ffffff;
+   color: #ffffff; */
+background-color:rgba(26,33,64,1);
+
 }
 /* .dark{
   

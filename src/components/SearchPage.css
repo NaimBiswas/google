@@ -46,20 +46,28 @@ p.searchPage_resultCount {
   
 }
 .dark {
-background-color: #FF9A8B;
-background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+background-color:rgba(26,33,64,1);
+color: #ffffff;
 
-   color: #ffffff;
 }
 .darkButton{
-   background-color: #FF9A8B;
-background-image: linear-gradient(180deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+   background-color: rgba(26,33,64,1);
+
 
    color: #ffffff;
    border: 1px solid wheat;
    outline: none;
    border-radius: 888888888888px;
 }
+.darkButton:hover{
+   background-color: rgb(8, 8, 8);
+   color: #ffffff;
+   border: 1px solid wheat;
+   outline: none;
+   border-radius: 888888888888px;
+}
+
+
 .darkButton:focus{
    box-shadow: none;
 }

@@ -34,7 +34,7 @@ const Home = ({ value, color }) => {
                      <li className='appIcons'><Link to='/account'><AccountCircleIcon className={color ? 'text-white' : ''} fontSize='large' color='action'></AccountCircleIcon ></Link>
                      </li>
                      <li className='appIcons'>
-                        <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Gradient Mode'}</button>
+                        <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Dark Mode'}</button>
                      </li>
                   </ul>
 
@@ -46,7 +46,7 @@ const Home = ({ value, color }) => {
                </div>
                <div className="google-seacrch-input">
                   {/* Seacrh Conponent here  */}
-                  <Seacrch></Seacrch>
+                  <Seacrch color={color}></Seacrch>
                </div>
             </div>
          </div>
