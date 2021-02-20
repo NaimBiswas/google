@@ -8,10 +8,10 @@ import { useStateValue } from '../StateProvider';
 import { actionTypes } from '../reducer';
 
 
-const Seacrch = ({ searchButtonHidden = false, color }) => {
+const Seacrch = ({ searchButtonHidden = false, color, inputValue }) => {
    const history = useHistory()
    const [{ }, dispatch] = useStateValue()
-   const [input, setInput] = useState("")
+   const [input, setInput] = useState(inputValue)
 
    const changeHandeler = (e) => {
 

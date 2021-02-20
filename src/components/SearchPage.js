@@ -30,7 +30,7 @@ const SearchPage = ({ color, value }) => {
             </Link>
 
             <div className="searchPageHader_body">
-               <Search color={color} searchButtonHidden></Search>
+               <Search inputValue={term} color={color} searchButtonHidden></Search>
 
 
 
