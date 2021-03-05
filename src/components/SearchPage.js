@@ -11,6 +11,7 @@ import Search from './Seacrch'
 import MicIcon from '@material-ui/icons/Mic';
 import { Button, Spinner } from 'react-bootstrap'
 import ResultsNav from './ResultsNav'
+import { Brightness3, WbSunny } from '@material-ui/icons'
 
 
 const SearchPage = ({ color, value }) => {
@@ -49,7 +50,14 @@ const SearchPage = ({ color, value }) => {
             </div>
 
             <div style={{ position: 'absolute', right: '30px', zIndex: '0000009999999' }} className="Button">
-               <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Dark Mode'}</button>
+
+               {
+                  color === false && <Brightness3 className='mt-2' style={{ cursor: 'pointer' }} onClick={() => value(preMode => !preMode)} />
+               }
+               {
+                  color === true && <WbSunny className='mt-2' style={{ cursor: 'pointer' }} onClick={() => value(preMode => !preMode)} />
+               }
+
             </div>
          </div>
 
