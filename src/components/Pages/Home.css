@@ -2,6 +2,10 @@
    .respornSiveLogo{
       height: 70px!important;
    }
+}@media screen and (max-width:450px){
+   .respornSiveLogo{
+      height: 80px!important;
+   }
 }
 .header_right{
    text-align: right;
