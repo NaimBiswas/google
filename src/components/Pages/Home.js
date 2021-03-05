@@ -7,6 +7,7 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Dropdown, NavItem, NavLink } from 'react-bootstrap';
 import Seacrch from '../Seacrch';
 import { Button } from 'react-bootstrap';
+import { Brightness3, WbSunny } from '@material-ui/icons';
 
 const Home = ({ value, color }) => {
 
@@ -34,7 +35,16 @@ const Home = ({ value, color }) => {
                      <li className='appIcons'><Link to='/account'><AccountCircleIcon className={color ? 'text-white' : ''} fontSize='large' color='action'></AccountCircleIcon ></Link>
                      </li>
                      <li className='appIcons'>
-                        <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} onClick={() => value(preMode => !preMode)} >{color ? 'Light Mode' : 'Dark Mode'}</button>
+                        {/* <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} >{color ? 'Light Mode' : 'Dark Mode'}</button> */}
+
+                        {
+                           color === false && <Brightness3 className='mt-2' style={{ cursor: 'pointer' }} onClick={() => value(preMode => !preMode)} />
+                        }
+                        {
+                           color === true && <WbSunny className='mt-2' style={{ cursor: 'pointer' }} onClick={() => value(preMode => !preMode)} />
+                        }
+
+
                      </li>
                   </ul>
 
