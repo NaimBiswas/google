@@ -1,20 +1,21 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import './SearchPage.css'
 import { useStateValue } from '../StateProvider'
 import useGoogleSearch from '../useGoogleSearch'
-import Response from '../response'
-import { Link, useHistory, NavLink } from 'react-router-dom'
+
+import { Link, } from 'react-router-dom'
 import Search from './Seacrch'
 
 
 
-import MicIcon from '@material-ui/icons/Mic';
-import { Button, Spinner } from 'react-bootstrap'
+
+import { Spinner } from 'react-bootstrap'
 import ResultsNav from './ResultsNav'
 import { Brightness3, WbSunny } from '@material-ui/icons'
-
+import AppsIcon from '@material-ui/icons/Apps';
 
 const SearchPage = ({ color, value }) => {
+   const [SHowResNav, setSHowResNav] = useState(false)
    const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
@@ -38,6 +39,7 @@ const SearchPage = ({ color, value }) => {
 
 
                <div className="searcHeader_option justify-content-between d-flex">
+
                   <ResultsNav value={value} color={color}></ResultsNav>
                   <ul>
                      <Link to='/' className={`nav-link pr-0 ${color ? "text-white" : ''}`}>Setting</Link>
@@ -59,6 +61,8 @@ const SearchPage = ({ color, value }) => {
                }
 
             </div>
+
+
          </div>
 
          {term && (

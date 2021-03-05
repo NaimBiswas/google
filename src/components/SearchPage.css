@@ -105,6 +105,15 @@ color: #ffffff;
    border-bottom: 3px solid #ff0000c2;
    padding-bottom: 34px;
 }
+svg.MuiSvgIcon-root.MenuSHowIcon{
+   float: right;
+    width: 20%;
+    margin: 0 auto;
+    padding-right: 0;
+    opacity: 0;
+    
+}
+
 
 
 
