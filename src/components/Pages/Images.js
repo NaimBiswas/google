@@ -12,7 +12,7 @@ const Images = ({ value, color }) => {
    const [{ term }] = useStateValue()
 
    const { data } = useGoogleSearch(term)
-   console.log(data);
+
    return (
       <div className="SearchPage">
          <div className={`searchPage-header  ${color ? 'dark' : ''}`}>
@@ -22,7 +22,7 @@ const Images = ({ value, color }) => {
             </Link>
 
             <div className="searchPageHader_body">
-               <Search searchButtonHidden></Search>
+               <Search inputValue={term} color={color} searchButtonHidden></Search>
 
 
 
