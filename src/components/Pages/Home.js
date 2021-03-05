@@ -35,7 +35,6 @@ const Home = ({ value, color }) => {
                      <li className='appIcons'><Link to='/account'><AccountCircleIcon className={color ? 'text-white' : ''} fontSize='large' color='action'></AccountCircleIcon ></Link>
                      </li>
                      <li className='appIcons'>
-                        {/* <button className={`btn btn-lg ${color ? 'darkButton ' : 'buttonLight'}`} >{color ? 'Light Mode' : 'Dark Mode'}</button> */}
 
                         {
                            color === false && <Brightness3 className='mt-2' style={{ cursor: 'pointer' }} onClick={() => value(preMode => !preMode)} />
@@ -52,7 +51,7 @@ const Home = ({ value, color }) => {
             </div>
             <div className="home_body">
                <div className="google-icon">
-                  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
+                  <img className='respornSiveLogo' src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
                </div>
                <div className="google-seacrch-input">
                   {/* Seacrh Conponent here  */}

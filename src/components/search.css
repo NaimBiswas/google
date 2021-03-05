@@ -75,6 +75,15 @@
 1deg
 , #0000000a, transparent);
 }
+@media screen and (max-width:450px){
+   .ResporsiveInput{
+       margin: 0 auto;
+    width: 68%;
+    margin-bottom: 24px!important;
+    margin-left: 20px;
+ 
+   }
+}
 .search-button button:focus{
   outline: 0;
   box-shadow: none ;

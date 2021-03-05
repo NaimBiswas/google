@@ -44,8 +44,8 @@ const Seacrch = ({ searchButtonHidden = false, color, inputValue }) => {
          <div className="search-button  text-center mt-4">
             {!searchButtonHidden ? (
                <div className="">
-                  <Button className={`input ${color ? 'text-white' : ''}`} type='submit' variant='outlined'>Google Search</Button>
-                  <Button className={`input ${color ? 'text-white' : ''}`} type='' variant='outlined'>I'm Feeling Lucky</Button>
+                  <Button className={`input ResporsiveInput ${color ? 'text-white' : ''}`} type='submit' variant='outlined'>Google Search</Button>
+                  <Button className={`input ResporsiveInput  ${color ? 'text-white' : ''}`} type='' variant='outlined'>I'm Feeling Lucky</Button>
                </div>
             ) : (
                   <div className="">
